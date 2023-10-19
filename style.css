@@ -1,0 +1,202 @@
+body {
+    background: linear-gradient(to right, #330066, #660066);
+}
+
+.component-container {
+    display: flex;
+    color: white;
+}
+
+.left-content {
+    flex: 1;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.right-image {
+    flex: 1;
+    text-align: left;
+}
+
+.right-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width: 767px) {
+    .left-content h2 {
+        font-size: 24px;
+    }
+
+    .left-content p {
+        font-size: 16px;
+    }
+
+    .left-content {
+        margin-top: 100px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .left-content {
+        text-align: right;
+        margin-top: 150px;
+    }
+
+    .right-image {
+        text-align: center;
+    }
+
+    .left-content h1 {
+        font-size: 36px;
+    }
+
+    .left-content p {
+        font-size: 20px;
+    }
+}
+
+.biography-container {
+    background-color: #5b085b;
+    color: rgb(218, 220, 213);
+    padding: 50px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out, opacity 2s ease-in-out;
+    margin: 0 100px;
+}
+
+.biography-content {
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.biography-content h2 {
+    font-size: 28px;
+}
+
+.biography-content p {
+    font-size: 18px;
+}
+
+.biography-container.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 767px) {
+    .biography-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
+.heading {
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(218, 220, 213);
+    font-family: Arial, sans-serif;
+}
+
+.heading h1 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.heading h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffcc00, transparent);
+    bottom: 0;
+    left: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 10px 100px;
+}
+
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 20px;
+    background: linear-gradient(to right, #7b7777, #630463);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px 20px;
+    }
+}
+
+.future-container {
+    background-color: #5b085b;
+    color: rgb(218, 220, 213);
+    height: auto;
+    width: auto;
+    margin: 10px 60px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
